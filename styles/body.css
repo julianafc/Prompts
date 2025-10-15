@@ -151,3 +151,48 @@ button {
 .logo {
     height: 24px;
 }
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 0.1px solid var(--gray-700);
+}
+
+.search-input {
+    background: transparent;
+    height: 44px;
+    width: 100%;
+    padding: 0 12px 0 25px;
+    outline: none;
+    color: var(--white);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+}
+
+.search-input::placeholder {
+    color: var(--gray-200);
+}
+
+.search-input>input {
+    border: 0;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
