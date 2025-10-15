@@ -2,7 +2,10 @@ const elements = {
     promptTitle: document.getElementById('prompt-title'),
     promptContent: document.getElementById('prompt-content'),
     titleWrapper: document.getElementById('title-wrapper'),
-    contentWrapper: document.getElementById('content-wrapper')
+    contentWrapper: document.getElementById('content-wrapper'),
+    btnOpen: document.getElementById("btn-open"),
+    btnCollapse: document.getElementById("btn-collapse"),
+    sidebar: document.querySelector('.sidebar')
 };
 
 function updateEditableWrapperState(element, wrapper) {
@@ -26,9 +29,23 @@ function attachAllEditableHandlers() {
     });
 }
 
+function openSidebar() {
+    elements.sidebar.style.display = 'flex';
+    elements.btnOpen.style.display = 'none';
+}
+
+function closeSidebar() {
+    elements.sidebar.style.display = 'none';
+    elements.btnOpen.style.display = 'block';
+}
+
 function init() {
     attachAllEditableHandlers();
     updateAllEditableStates();
+
+    // Declarando as funções de abrir e fechar a sidebar
+    elements.btnOpen.addEventListener('click', openSidebar);
+    elements.btnCollapse.addEventListener('click', closeSidebar);
 }
 
 init();

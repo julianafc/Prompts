@@ -116,3 +116,38 @@ button {
     line-height: 32px;
     caret-color: var(--gray-200);
 }
+
+.icon-button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.open-toggle {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    display: none;
+}
+
+.sidebar {
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 32px;
+    background-color: var(--gray-800);
+    border-right: 0.5px solid var(--gray-700);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 24px;
+}
