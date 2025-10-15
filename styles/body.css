@@ -187,12 +187,59 @@ button {
 .search-icon {
     position: absolute;
     left: 16px;
-    width: 20px;
-    height: 20px;
     opacity: 0.8;
 }
 
 .btn-full {
     width: 100%;
     justify-content: center;
+}
+
+.prompt-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.prompt-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.prompt-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.prompt-item-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prompt-item-description {
+    font-size: 12px;
+    color: var(--gray-100);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#icon-trash {
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+}
+
+#icon-trash:hover {
+    background: var(--alert-800);
 }
