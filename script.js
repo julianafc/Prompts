@@ -17,6 +17,7 @@ const elements = {
     list: document.getElementById('prompt-list'),
     search: document.getElementById('search-input'),
     btnNew: document.getElementById('btn-new'),
+    btnCopy: document.getElementById('btn-copy'),
 };
 
 function updateEditableWrapperState(element, wrapper) {
@@ -116,11 +117,14 @@ function load() {
 }
 
 function createPromptListItem(prompt) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = prompt.content;
+
     return `
         <li class="prompt-item" data-id="${prompt.id}" data-action="select">
             <div class="prompt-item-content">
             <span class="prompt-item-title">${prompt.title}</span>
-            <span class="prompt-item-description">${prompt.content}</span>
+            <span class="prompt-item-description">${tmp.textContent}</span>
             </div>
 
             <button class="icon-button" id="icon-trash" aria-label="Remover prompt" data-action="remove">
@@ -135,6 +139,24 @@ function renderList(filterText = "") {
         prompt.title.toLowerCase().includes(filterText.toLowerCase().trim())).map((p) => createPromptListItem(p)).join("");
 
     elements.list.innerHTML = filteredPrompts;
+}
+
+function copySelected() {
+    try {
+
+        const content = elements.promptContent
+
+        if (!navigator.clipboard) {
+            console.log("A API de área de transferência não é suportada neste navegador.");
+            return;
+        }
+
+        navigator.clipboard.writeText(content.innerText);
+        alert("Conteúdo copiado para a área de transferência!");
+
+    } catch (error) {
+        console.error("Erro ao copiar para a área de transferência:", error);
+    }
 }
 
 elements.btnSave.addEventListener('click', save);
@@ -170,6 +192,8 @@ elements.list.addEventListener('click', (event) => {
         }
     }
 });
+
+elements.btnCopy.addEventListener('click', copySelected)
 
 function init() {
     load();
