@@ -129,7 +129,8 @@ button {
     position: absolute;
     top: 8%;
     left: 8%;
-    display: none;
+    /* display: none; */
+    z-index: 0;
 }
 
 .sidebar {
@@ -141,12 +142,20 @@ button {
     padding: 32px;
     background-color: var(--gray-800);
     border-right: 0.5px solid var(--gray-700);
+    z-index: 1;
 }
 
 .sidebar-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.sidebar.collapsed {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateX(0);
 }
 
 .logo {
@@ -234,7 +243,7 @@ button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 300px;
+    max-width: 290px;
 }
 
 #icon-trash {
@@ -245,4 +254,38 @@ button {
 
 #icon-trash:hover {
     background: var(--alert-800);
+}
+
+@media (max-width:950px) {
+    .open-toggle {
+        display: block;
+        top: 38px;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 80%;
+        max-width: 300px;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .main {
+        padding: 24px 32px;
+        margin-left: 0;
+        overflow-y: auto;
+    }
+
+    .prompt-item-title,
+    .prompt-item-description {
+        max-width: 180px;
+    }
 }

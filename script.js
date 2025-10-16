@@ -42,13 +42,13 @@ function attachAllEditableHandlers() {
 }
 
 function openSidebar() {
-    elements.sidebar.style.display = 'flex';
-    elements.btnOpen.style.display = 'none';
+    elements.sidebar.classList.add("open");
+    elements.sidebar.classList.remove("collapsed");
 }
 
 function closeSidebar() {
-    elements.sidebar.style.display = 'none';
-    elements.btnOpen.style.display = 'block';
+    elements.sidebar.classList.remove("open");
+    elements.sidebar.classList.add("collapsed");
 }
 
 function save() {
@@ -200,6 +200,9 @@ function init() {
     renderList('');
     attachAllEditableHandlers();
     updateAllEditableStates();
+
+    elements.sidebar.classList.remove("open");
+    elements.sidebar.classList.remove("collapsed");
 
     // Declarando as funções de abrir e fechar a sidebar
     elements.btnOpen.addEventListener('click', openSidebar);
