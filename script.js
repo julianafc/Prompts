@@ -18,6 +18,9 @@ const elements = {
     search: document.getElementById('search-input'),
     btnNew: document.getElementById('btn-new'),
     btnCopy: document.getElementById('btn-copy'),
+    btnTheme: document.getElementById('btn-theme'),
+    appLogo: document.getElementById('app-logo'),
+    copyIcon: document.getElementById('copy-icon'),
 };
 
 function updateEditableWrapperState(element, wrapper) {
@@ -195,6 +198,33 @@ elements.list.addEventListener('click', (event) => {
 
 elements.btnCopy.addEventListener('click', copySelected)
 
+
+const THEME_KEY = 'app_theme'; // localStorage key
+
+function applyTheme(theme) {
+    const root = document.documentElement;
+    if (theme === 'light') {
+        root.setAttribute('data-theme', 'light');
+        elements.btnTheme && (elements.btnTheme.textContent = 'Dark Mode');
+        // Troca assets para tema claro
+        if (elements.appLogo) elements.appLogo.src = 'assets/logo_light_mode.svg';
+        if (elements.copyIcon) elements.copyIcon.src = 'assets/copy_light_mode.png';
+    } else {
+        root.removeAttribute('data-theme');
+        elements.btnTheme && (elements.btnTheme.textContent = 'Light Mode');
+        // Troca assets para tema escuro (padrão)
+        if (elements.appLogo) elements.appLogo.src = 'assets/logo.svg';
+        if (elements.copyIcon) elements.copyIcon.src = 'assets/copy.svg';
+    }
+}
+
+function toggleTheme() {
+    const current = localStorage.getItem(THEME_KEY) || 'light';
+    const next = current === 'light' ? 'dark' : 'light';
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+}
+
 function init() {
     load();
     renderList('');
@@ -204,9 +234,14 @@ function init() {
     elements.sidebar.classList.remove("open");
     elements.sidebar.classList.remove("collapsed");
 
-    // Declarando as funções de abrir e fechar a sidebar
     elements.btnOpen.addEventListener('click', openSidebar);
     elements.btnCollapse.addEventListener('click', closeSidebar);
+
+    const savedTheme = localStorage.getItem(THEME_KEY) || 'light';
+    applyTheme(savedTheme);
+    if (elements.btnTheme) {
+        elements.btnTheme.addEventListener('click', toggleTheme);
+    }
 }
 
 init();

@@ -62,7 +62,7 @@ button {
 .btn-primary {
     background-color: var(--accent-600);
     border: 1px solid var(--accent-500);
-    color: var(--gray-900);
+    color: #111111;
     font-weight: 600;
     padding: 0 24px;
     transition: opacity 0.5s;
@@ -73,7 +73,7 @@ button {
 }
 
 .w-150 {
-    width: 150px;
+    max-width: 150px;
     justify-content: center;
 }
 
@@ -287,5 +287,45 @@ button {
     .prompt-item-title,
     .prompt-item-description {
         max-width: 180px;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas */
+@media (max-width:490px) {
+    .main {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .main-header {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        height: 36px;
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .btn-primary {
+        padding: 0 16px;
+    }
+
+    .btn-outline {
+        padding: 0 12px;
+    }
+
+    .w-150 {
+        max-width: 120px;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .search-input {
+        height: 38px;
     }
 }

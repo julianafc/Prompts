@@ -14,6 +14,15 @@
     --gray-100: #737373;
 }
 
+:root[data-theme="light"] {
+    --gray-900: #ffffff;
+    --gray-800: #f7f7f7;
+    --gray-700: #e6e6e6;
+    --gray-200: #9e9e9e;
+    --gray-100: #616161;
+    --white: #111111;
+}
+
 * {
     margin: 0;
     padding: 0;
