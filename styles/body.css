@@ -62,7 +62,8 @@ button {
 .btn-primary {
     background-color: var(--accent-600);
     border: 1px solid var(--accent-500);
-    color: var(--white);
+    color: var(--gray-900);
+    font-weight: 600;
     padding: 0 24px;
     transition: opacity 0.5s;
 }
@@ -224,6 +225,7 @@ button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 300px;
 }
 
 .prompt-item-description {
@@ -232,6 +234,7 @@ button {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 300px;
 }
 
 #icon-trash {

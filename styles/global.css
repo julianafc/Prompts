@@ -1,11 +1,11 @@
 :root {
     --white: #ffffff;
 
-    --accent-600: #4863f7;
-    --accent-500: #7878d7;
+    --accent-600: #ADFF2F;
+    --accent-500: #9bb85e;
 
-    --alert-600: #ff5c5c;
-    --alert-800: rgba(255, 92, 92, 0.08);
+    --alert-600: #ff0000;
+    --alert-800: rgba(255, 0, 0, 0.08);
 
     --gray-900: #0d0d0d;
     --gray-800: #111111;
