@@ -42,8 +42,10 @@ O projeto foi desenhado com foco em experiência: interface limpa, responsiva do
   ### Versão Mobile:
 
 <div align="center">
-<img src="https://github.com/user-attachments/assets/57d9f620-c8f7-43d4-bc87-9675b3353024" alt="Versão mobile, light mode" height=846px>
-<img src="https://github.com/user-attachments/assets/a5381a73-8a05-4497-8141-6b4b8554ee5d" alt="Versão mobile, dark mode" height=846px> Versão light/Versão dark </br>
+<img src="https://github.com/user-attachments/assets/57d9f620-c8f7-43d4-bc87-9675b3353024" alt="Versão mobile, light mode" height=846px width=339px>
+<img src="https://github.com/user-attachments/assets/a5381a73-8a05-4497-8141-6b4b8554ee5d" alt="Versão mobile, dark mode" height=846px width=339px> 
+  </br>
+  Versão light/Versão dark 
  </div>
 
 ### Versão Desktop:
