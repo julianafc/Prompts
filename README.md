@@ -1,6 +1,6 @@
 # 📝 Prompts
 
-Prompts é um site pensado para facilitar o dia a dia de quem trabalha com prompts: você cria, salva, organiza e reutiliza seus textos com agilidade. A aplicação oferece busca instantânea por título, pré-visualização do conteúdo, cópia com um clique e persistência local — tudo para acelerar seu fluxo de trabalho.
+Prompts é um site pensado para facilitar o dia a dia de quem trabalha com prompts: você cria, salva, organiza e reutiliza seus textos com agilidade. A aplicação oferece busca instantânea por título, pré-visualização do conteúdo, cópia com um clique e persistência local, tudo para acelerar seu fluxo de trabalho.
 
 O projeto foi desenhado com foco em experiência: interface limpa, responsiva do mobile ao desktop, modo claro/escuro com troca dinâmica de ícones e logo, além de uma sidebar prática para navegar entre os prompts. Mesmo sem conexão com a internet, seus dados ficam disponíveis graças ao armazenamento local (localStorage).
 
@@ -38,18 +38,19 @@ O projeto foi desenhado com foco em experiência: interface limpa, responsiva do
 
 ## 🖼️ Demonstração
 
-Galeria de telas (substitua pelas suas imagens):
 
-- Light — Desktop  
-  ![Light Desktop](assets/screenshots/light-desktop.png)
+  ### Versão Mobile:
 
-- Light — Mobile  
-  ![Light Mobile](assets/screenshots/light-mobile.png)
+<div align="center">
+<img src="https://github.com/user-attachments/assets/57d9f620-c8f7-43d4-bc87-9675b3353024" alt="Versão mobile, light mode" height=846px>
+<img src="https://github.com/user-attachments/assets/a5381a73-8a05-4497-8141-6b4b8554ee5d" alt="Versão mobile, dark mode" height=846px> Versão light/Versão dark </br>
+ </div>
 
-- Dark — Desktop  
-  ![Dark Desktop](assets/screenshots/dark-desktop.png)
+### Versão Desktop:
 
-- Dark — Mobile  
-  ![Dark Mobile](assets/screenshots/dark-mobile.png)
+ <div align="center">
+<img src="https://github.com/user-attachments/assets/f1e9fb93-1b77-4549-b050-61f5bb480aef" alt="Versão desktop, light mode"> Versão light </br> </br>
+<img src="https://github.com/user-attachments/assets/6e307af7-13f2-4ee9-aa27-60a7a4b02358" alt="Versão desktop, dark mode">  Versão dark </br>
+ </div>
 
-Acesse o projeto através deste link: [Prompts](https://seu-link-aqui)
+ Acesso o projeto através deste link: [Prompts](https://julianafc.github.io/Prompts/)
